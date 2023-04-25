@@ -9,23 +9,25 @@ bool number_name(int num, std::string file_path) {
 
     short n1 = num / 10; //Десятки
     short n2 = num % 10; //Единици
+
     std::ofstream out;
     out.open(file_path);
-    if(!out.is_open())
-    return false;
+    
+    if (!out.is_open())
+        return false;
 
     if (n1 == 1) {
         switch (n2) { // Обработка единиц 1
-        case 0: name = "Десять";
-        case 2: name = "Одинадцать"; break;
-        case 3: name = "Двенадцать"; break;
-        case 4: name = "Тринадцать"; break;
-        case 5: name = "Четырнадцать"; break;
-        case 6: name = "Пятнадцать"; break;
-        case 7: name = "Шестнадцать"; break;
-        case 8: name = "Семнадцать"; break;
-        case 9: name = "Восемнадцать"; break;
-        case 10: name = "Девятнадцать"; break;
+        case 0: name = "Десять"; break;
+        case 1: name = "Одинадцать"; break;
+        case 2: name = "Двенадцать"; break;
+        case 3: name = "Тринадцать"; break;
+        case 4: name = "Четырнадцать"; break;
+        case 5: name = "Пятнадцать"; break;
+        case 6: name = "Шестнадцать"; break;
+        case 7: name = "Семнадцать"; break;
+        case 8: name = "Восемнадцать"; break;
+        case 9: name = "Девятнадцать"; break;
         }
         out << name << '\n';
         return true;
